@@ -20,7 +20,7 @@ const NoteState = (props) => {
       __v: 0,
     },
     {
-      _id: "665583577ce82a35793758b3",
+      _id: "665583577ce82a35793758b33",
       user: "665034f30e5606cb7ac8d91c",
       title: "Aryan",
       description: "Good Afternoon",
@@ -28,7 +28,7 @@ const NoteState = (props) => {
       __v: 0,
     },
     {
-      _id: "665583577ce82a35793758b3",
+      _id: "665583577ce382a35793758b3",
       user: "665034f30e5606cb7ac8d91c",
       title: "Aryan",
       description: "Good Afternoon",
@@ -36,7 +36,7 @@ const NoteState = (props) => {
       __v: 0,
     },
     {
-      _id: "665583577ce82a35793758b3",
+      _id: "665583577ce82a357393758b3",
       user: "665034f30e5606cb7ac8d91c",
       title: "Aryan",
       description: "Good Afternoon",
@@ -44,7 +44,7 @@ const NoteState = (props) => {
       __v: 0,
     },
     {
-      _id: "665583577ce82a35793758b3",
+      _id: "665583577c3e82a35793758b3",
       user: "665034f30e5606cb7ac8d91c",
       title: "Aryan",
       description: "Good Afternoon",
@@ -52,7 +52,7 @@ const NoteState = (props) => {
       __v: 0,
     },
     {
-      _id: "665583577ce82a35793758b3",
+      _id: "665583577ce82a353793758b3",
       user: "665034f30e5606cb7ac8d91c",
       title: "Aryan",
       description: "Good Afternoon",
@@ -60,7 +60,7 @@ const NoteState = (props) => {
       __v: 0,
     },
     {
-      _id: "665583577ce82a35793758b3",
+      _id: "665583577ce82a357937583b3",
       user: "665034f30e5606cb7ac8d91c",
       title: "Aryan",
       description: "Good Afternoon",
@@ -74,7 +74,17 @@ const NoteState = (props) => {
 
   // ADD NOTE
 
-  const addNote = () => {
+  const addNote = (title,description,tag) => {
+    console.log('adding new note');
+    const note ={
+      _id: "6655835677ce82a35793758b3",
+      user: "665034f30e5606cb7ac8d91c",
+      title: "Nikhil",
+      description: "Good Morning",
+      tag: "Personal",
+      __v: 0,
+    }
+    setnotes(notes.concat(note));
 
   }
 
@@ -84,13 +94,13 @@ const NoteState = (props) => {
 
   }
 
-  // UPDATE NOTE
-  const updateNote = () => {
+  // edit NOTE
+  const editNote = () => {
     
   }
 
   return (
-    <NoteContext.Provider value={{notes,addNote,deleteNote,updateNote}}>{props.children}</NoteContext.Provider>
+    <NoteContext.Provider value={{notes,addNote,deleteNote,editNote}}>{props.children}</NoteContext.Provider>
   );
 };
 
