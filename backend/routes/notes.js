@@ -16,9 +16,9 @@ routes.get("/fetchNotes", fetchuser, async (req, res) => {
   }
 });
 
-//Route 2: For Add new note get:/api/notes/addNote
+//Route 2: For Add new note post:/api/notes/addNote
 
-routes.get(
+routes.post(
   "/addNote",
   fetchuser,
   [
