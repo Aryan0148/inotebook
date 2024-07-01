@@ -6,7 +6,6 @@ const Noteitem = (props) => {
   const {deleteNote} = context;
   const note = props.note;
   const updateNote = props.updateNote;
-  console.log(note);
   return (
     <div className="col-md-3">
       <div className="card m-3">
